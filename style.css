@@ -1,3 +1,6 @@
+
+/* high contrast yellow on black to feel like og rave flyers and warning signage, 
+   striking and very on brand for a tech mix */
 :root {
   --primary-bg-color: #0d0d0d;
   --text-color: #f0e040;
@@ -5,7 +8,6 @@
   --main-text-color: #ffffff;
   --main-btn-bg-color: #2a2a2a;
 }
-
 body,
 h1,
 p,
@@ -14,8 +16,14 @@ ul {
   padding: 0;
 }
 
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+}
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Space Mono", monospace;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -41,6 +49,8 @@ header {
   padding: 10px 0;
   text-align: center;
   width: 100%;
+  padding: 20px 0;
+  letter-spacing: 0.05em;
 }
 
 /* Navigation styling */
@@ -82,7 +92,8 @@ nav a {
   margin-top: 10px;
   width: 100%;
 }
-
+/* buttons have no border-radius to make look mean and industrial 
+   rounded corners felt too soft for a DJ context */
 .custom-controls button {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
@@ -92,12 +103,20 @@ nav a {
   font-size: 16px;
   display: flex;
   align-items: center;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+}
+/* hover flips the button to yellow not only for aesthetics but also for ease 
+navigation and a sense of feedback */
+
+.custom-controls button:hover {
+  background-color: var(--text-color);
 }
 
 .progress-bar {
   width: 100%;
   height: 10px;
-  background-color: #ddd;
+  background-color: #2a2a2a;
   margin-top: 10px;
   overflow: hidden;
 }
@@ -105,7 +124,7 @@ nav a {
 .progress-bar span {
   display: block;
   height: 100%;
-  background-color: var(--main-bg-color);
+  background-color: var(--text-color);
   width: 0;
   transition: width 0.3s ease;
 }

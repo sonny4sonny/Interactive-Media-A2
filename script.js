@@ -3,7 +3,7 @@ const playPauseBtn = document.querySelector("#play-pause-btn");
 const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
 const volumeSlider = document.querySelector("#volume-slider");
-
+const muteImg = document.querySelector("#mute-img");
 // reference to progress bar for scrubbing
 const progressBarContainer = document.querySelector(".progress-bar");
 video.removeAttribute("controls");
@@ -25,7 +25,8 @@ function updateProgressBar() {
 // Add other functionalities here 
 
 // wooooooo finally got this mf, this is the added functionality to scrub through the video 
-// had to use progressBarContainer not progressBar turns out progressBar is just the full width so it was skipping straight to the end when you used it
+// had to use progressBarContainer not progressBar turns out progressBar is just the full width so it 
+// was skipping straight to the end when you used it
 // did this because people want the freedom to navigate through videos at their own pace
 progressBarContainer.addEventListener("click", function(event){
 video.currentTime = (event.offsetX / progressBarContainer.offsetWidth) * video.duration;
@@ -34,3 +35,14 @@ video.currentTime = (event.offsetX / progressBarContainer.offsetWidth) * video.d
 volumeSlider.addEventListener("input", function(event){
 video.volume = volumeSlider.value
 });
+
+// copied the playpause function and changed variables and images to become a mute button
+function toggleMute() {
+  if (video.muted) {
+    video.muted = false;
+    muteImg.src = "https://img.icons8.com/?size=100&id=91635&format=png&color=000000 ";
+  } else {
+    video.muted = true;
+    muteImg.src = "https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000";
+  }
+}
