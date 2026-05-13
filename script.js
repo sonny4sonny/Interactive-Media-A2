@@ -2,6 +2,10 @@ const video = document.querySelector("#custom-video-player");
 const playPauseBtn = document.querySelector("#play-pause-btn");
 const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
+const volumeSlider = document.querySelector("#volume-slider");
+
+// reference to progress bar for scrubbing
+const progressBarContainer = document.querySelector(".progress-bar");
 video.removeAttribute("controls");
 // playPauseBtn.addEventListener("click", togglePlayPause);
 video.addEventListener("timeupdate", updateProgressBar);
@@ -19,3 +23,14 @@ function updateProgressBar() {
   progressBar.style.width = value + "%";
 }
 // Add other functionalities here 
+
+// wooooooo finally got this mf, this is the added functionality to scrub through the video 
+// had to use progressBarContainer not progressBar turns out progressBar is just the full width so it was skipping straight to the end when you used it
+// did this because people want the freedom to navigate through videos at their own pace
+progressBarContainer.addEventListener("click", function(event){
+video.currentTime = (event.offsetX / progressBarContainer.offsetWidth) * video.duration;
+});
+
+volumeSlider.addEventListener("input", function(event){
+video.volume = volumeSlider.value
+});
