@@ -46,3 +46,4 @@ function toggleMute() {
     muteImg.src = "https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000";
   }
 }
+
