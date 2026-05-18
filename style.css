@@ -142,7 +142,7 @@ footer {
 .tv-wrapper {
   position: relative;
   width: 100%;
-  max-width: 50%;
+  max-width: 55.94%;
 }
 
 /* tv image sits on top, full width */
@@ -177,12 +177,12 @@ footer {
 2- so that the page doesnt become scrollable */
 .screen-text {
   position: absolute;
-  bottom: 29%;
+  bottom: 70%;
   left: 12%;
   z-index: 3;
   color: var(--main-text-color);
   font-family: "Space Mono", monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.99;
 }
 
