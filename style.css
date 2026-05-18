@@ -53,27 +53,6 @@ header {
   letter-spacing: 0.05em;
 }
 
-/* Navigation styling */
-nav {
-  margin-top: 20px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
 /* Media player styling */
 .media-player {
   width: 100%;
@@ -138,7 +117,8 @@ footer {
   padding: 10px 0;
   width: 100%;
 }
-/* wrapper so the tv and video position together  */
+/* wrapper so the tv and video position together, had to google how to 
+make this all work - answers came from googles AI summary thing  */
 .tv-wrapper {
   position: relative;
   width: 100%;
@@ -199,13 +179,4 @@ is a declaration for animation so i could use it again on other */
   animation: flicker .06s infinite;
 }
 
-/* made the video flicker faster  */
-@keyframes flicker {
-  0%, 60% { opacity: 1; }
-  30% { opacity: 0; }
-}
-
-.tv-wrapper video {
-  animation: flicker 10ms infinite;
-}
 

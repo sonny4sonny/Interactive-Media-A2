@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&family=Orbitron&display=swap" rel="stylesheet">
-
-
   </head>
   <body>
+    
     <!-- Header Section -->
     <header>
       <h1>sonny</h1>
     </header>
 
+     
+    <!-- TV and on screen text -->
+
+ <!-- added a tv frame for the video to sit inside, feels on brand and quite in the Rage abc 
+ sort of context of the 90s style tech music video -->
+ <!-- TV frame wrapper? so video sits behind the TV image to appear inside the screen -->
   <div class="tv-wrapper">
   <img src="tv.png" alt="retro TV frame" class="tv-frame" />
   <video id="custom-video-player">
@@ -33,10 +38,8 @@
     
   </div>
 </div>
-<!-- added a tv frame for the video to sit inside, feels on brand and quite in the Rage abc 
- sort of context of the 90s style tech music video -->
-<!-- TV frame wrapper? so video sits behind the TV image to appear inside the screen -->
-  
+
+  <!-- buttons and controls -->
         <div class="custom-controls">
   <button id="play-pause-btn" onclick="togglePlayPause()">
     <img
@@ -50,7 +53,7 @@
   <div class="progress-bar">
     <span id="progress-bar-fill"></span>
   </div>
-  <!-- add the missing buttons or functionality here -->
+  
           
   <!-- volume slider and mute button added, vital controls for a commonly loud and full sounding media -->
   <label>volume</label>
@@ -66,13 +69,19 @@
   </button>
 </div>
 
+<!-- USER PERSONA AND DESIGN THINKING
+ design is targetted toward a 22 year old music obsessed australian
+user consumes music videos much like you would films and tv, full screen, on their laptop at night
+doesnt want a basic mp4 player, wants more of an experience.
 
+TV frame makes watching feel deliberate and intentional - like playing vinyls over spotify
+blacked out site for ease of viewing at night time, also brings tv to centre of visual heirachy
+flicker makes it feel nostalgic and analog, like watching Rage at 6am before school-->
           
 
       <!-- Additional Content Section -->
       <section>
         <h2>shoegazerrr</h2>
-        <p></p>
         <!-- Add more content as needed -->
       </section>
     </main>
@@ -90,9 +99,10 @@
       <a href="https://icons8.com">Icons8</a>
       <a href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono&display=swap " > Orbitron </a> font by
       <a href="https://fonts.google.com/specimen/Orbitron">Google</a>
-    
       <a href="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)" > TV  </a> frame from 
       <a href="https://pngimg.com/">pngimg</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@keyframes" > Keyframe theory  </a> from 
+      <a href="https://developer.mozilla.org/en-US/">mozilla</a>
       
     </footer>
   </body>
