@@ -1,10 +1,10 @@
 
-/* high contrast yellow on black to feel like og rave flyers and warning signage, 
-   striking and very on brand for a tech mix */
+/* high contrast yellow on black to feel like og rave videos like on Rage and warning signage, 
+   striking and very on brand for a tech clip */
 :root {
-  --primary-bg-color: #0d0d0d;
+  --primary-bg-color: #000000;
   --text-color: #f0e040;
-  --main-bg-color: #1a1a1a;
+  --main-bg-color: #000000;
   --main-text-color: #ffffff;
   --main-btn-bg-color: #2a2a2a;
 }
@@ -91,9 +91,10 @@ nav a {
   gap: 1rem;
   margin-top: 10px;
   width: 100%;
+  max-width: 1000px;
 }
 /* buttons have no border-radius to make look mean and industrial 
-   rounded corners felt too soft for a DJ context */
+   rounded corners felt too soft for a techy music video context */
 .custom-controls button {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
@@ -137,33 +138,74 @@ footer {
   padding: 10px 0;
   width: 100%;
 }
-
-#visualiser {
-  width: 100%;
-  height: 200px;
-  display: block;
-  background-color: var(--main-bg-color);
-}
-
 /* wrapper so the tv and video position together  */
 .tv-wrapper {
   position: relative;
   width: 100%;
+  max-width: 50%;
 }
 
 /* tv image sits on top, full width */
 .tv-frame {
   width: 100%;
   display: block;
+  position: relative;
+  z-index: 2;
 }
+
 
 /* video is positioned absolutely to sit behind the tv frame, 
    these percentages need to be changed so it lines up but i think its just
    a trial and error situation */
+   /* after 20 minutes of changing numbers i got it, had to add the zindex to both the frame and mp4 
+   that the video is behind the tv, also had to add the object-fit to change aspect ratio - thanks google */
+
+
 .tv-wrapper video {
   position: absolute;
   top: 12%;
-  left: 48%;
-  width: 60%;
-  height: 78%;
+  left: 8%;
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+  object-fit: cover;
 }
+
+
+/* had to wrap the title text so i could put it on the tv for two reasons
+1- so that it feels like youre watching rage in the morning on abc
+2- so that the page doesnt become scrollable */
+.screen-text {
+  position: absolute;
+  bottom: 29%;
+  left: 12%;
+  z-index: 3;
+  color: var(--main-text-color);
+  font-family: "Space Mono", monospace;
+  font-size: 1.2rem;
+  line-height: 1.99;
+}
+
+
+/* wanted the text to flicker, found the instructions on modzilla and 
+played with it till it worked - from what i understand the keyframe tag
+is a declaration for animation so i could use it again on other */
+@keyframes flicker {
+  0%, 60% { opacity: 1; }
+  30% { opacity: 0; }
+}
+
+.screen-text {
+  animation: flicker .06s infinite;
+}
+
+/* made the video flicker faster  */
+@keyframes flicker {
+  0%, 60% { opacity: 1; }
+  30% { opacity: 0; }
+}
+
+.tv-wrapper video {
+  animation: flicker 10ms infinite;
+}
+

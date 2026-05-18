@@ -7,7 +7,6 @@ const muteImg = document.querySelector("#mute-img");
 // reference to progress bar for scrubbing
 const progressBarContainer = document.querySelector(".progress-bar");
 video.removeAttribute("controls");
-// playPauseBtn.addEventListener("click", togglePlayPause);
 video.addEventListener("timeupdate", updateProgressBar);
 function togglePlayPause() {
   if (video.paused || video.ended) {
@@ -27,7 +26,7 @@ function updateProgressBar() {
 // wooooooo finally got this mf, this is the added functionality to scrub through the video 
 // had to use progressBarContainer not progressBar turns out progressBar is just the full width so it 
 // was skipping straight to the end when you used it
-// did this because people want the freedom to navigate through videos at their own pace
+// did this because people want the freedom to navigate through music videos at their own pace
 progressBarContainer.addEventListener("click", function(event){
 video.currentTime = (event.offsetX / progressBarContainer.offsetWidth) * video.duration;
 });
