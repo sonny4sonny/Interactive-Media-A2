@@ -4,6 +4,8 @@ const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
 const volumeSlider = document.querySelector("#volume-slider");
 const muteImg = document.querySelector("#mute-img");
+const fullscreenBtn = document.querySelector("#fullscreen-btn");
+
 // reference to progress bar for scrubbing
 const progressBarContainer = document.querySelector(".progress-bar");
 video.removeAttribute("controls");
@@ -46,3 +48,10 @@ function toggleMute() {
   }
 }
 
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    video.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}

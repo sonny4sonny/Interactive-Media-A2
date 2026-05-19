@@ -15,7 +15,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+/* techy modern font to match the energy of the video  */
 h1 {
   font-family: "Orbitron", sans-serif;
   font-size: 3rem;
@@ -138,7 +138,7 @@ make this all work - answers came from googles AI summary thing  */
    these percentages need to be changed so it lines up but i think its just
    a trial and error situation */
    /* after 20 minutes of changing numbers i got it, had to add the zindex to both the frame and mp4 
-   that the video is behind the tv, also had to add the object-fit to change aspect ratio - thanks google */
+   that the video is behind the tv, also had to add the object-fit to change aspect ratio - thanks Google AI summary */
 
 
 .tv-wrapper video {
@@ -167,7 +167,7 @@ make this all work - answers came from googles AI summary thing  */
 }
 
 
-/* wanted the text to flicker, found the instructions on modzilla and 
+/* wanted the text to flicker, found the instructions on mozilla and wrote then
 played with it till it worked - from what i understand the keyframe tag
 is a declaration for animation so i could use it again on other */
 @keyframes flicker {
@@ -180,3 +180,8 @@ is a declaration for animation so i could use it again on other */
 }
 
 
+/* added to make the volume slider yellow not blue to keep with restricted palette  */
+
+#volume-slider {
+  accent-color: var(--text-color);
+}
